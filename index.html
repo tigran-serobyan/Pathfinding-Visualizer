@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="script.js"></script>
+    <script src="maze.js"></script>
+    <script src="dijkstra.js"></script>
+    <script src="greedy.js"></script>
+    <script src="swarm.js"></script>
+    <script src="bidirectional.js"></script>
+    <script src="breath.js"></script>
+    <script src="depth.js"></script>
+    <title>Pathfinding Visualizer</title>
+</head>
+
+<body>
+    <header>
+        <h1>Pathfinding Visualizer</h1>
+        <p class="help">
+            <u>&quest;</u>
+            <em> <b> How to use: </b> <br>
+                Generate a maze. <br>
+                Choose start and end nodes. <br>
+                Choose an algorithm. <br>
+                Visualize the pathfinding proccess.
+            </em>
+        </p>
+    </header>
+    <nav>
+        <span class="section1">
+            <button onclick="newMaze()" class="maze"> Generate a maze </button>
+            <button onclick="newMatrix()"> Clear </button>
+        </span>
+        <span class="section2">
+            <span class="wall"> Wall Node </span>
+            <span class="visited"> Visited Node </span>
+            <button onclick="selectStartNode()" class="start"> Start Node </button>
+            <button onclick="selectEndNode()" class="end"> End Node </button>
+        </span>
+        <span class="section3">
+            <select id="algorithms">
+                <option value="dijkstra">Dijkstra's Algorithm</option>
+                <option value="greedy">Greedy Best-first Search</option>
+                <option value="swarm">Swarm Algorithm</option>
+                <option value="bidirectional">Bidirectional Swarm Algorithm</option>
+                <option value="breath">Breath-first Search</option>
+                <option value="depth">Depth-first Search</option>
+            </select>
+            <button onclick="visualize()" id="visualize"> Visualize</button>
+        </span>
+    </nav>
+</body>
+
+</html>
